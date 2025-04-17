@@ -28,12 +28,11 @@ def run_single_test():
 
     result = simulate_policy_lifecycle(ph, policy, mortality_table)
     
-    print(f"Policy ID: {result.policy_id}")
     print(f"Total Premiums Paid: {result.total_premium_paid}")
     print(f"Claim Paid: {result.claim_paid}")
-    print(f"Year of Death: {result.year_of_death}")
-    print(f"Alive at End?: {result.alive}")
-    print("Yearly Breakdown:")
+    print(f"Present Value of Premiums: {result.pv_premiums:.2f}")
+    print(f"Present Value of Claims: {result.pv_claims:.2f}")
+    print(f"Net PV Profit (Insurer): {result.pv_premiums - result.pv_claims:.2f}")
     for year_info in result.years:
         print(year_info)
 
