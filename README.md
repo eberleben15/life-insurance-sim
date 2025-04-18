@@ -54,3 +54,32 @@ age,gender,smoker,qx
 ...
 
 You can extend this up to age 100+ or use real actuarial tables.
+
+🧪 How to Run
+
+🔹 Simulate One Policyholder
+
+```bash
+python main.py
+```
+
+🔹 Monte Carlo on One Profile (1,000+ runs)
+```bash
+python simulation_batch.py
+```
+
+🔹 Simulate Full Portfolio (64 profiles × 500 runs)
+```bash
+python simulation_portfolio.py
+```
+
+---
+
+📈 Sample Output
+```bash
+🧑‍🤝‍🧑 Profile: Age 50, Gender F, Smoker: False, Face: $500,000
+  Death Rate: 22.1%
+  Avg Premiums Paid: $16,800.00
+  Avg Claims Paid: $103,000.00
+  Avg Net Profit: -$86,200.00
+```
